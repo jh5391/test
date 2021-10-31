@@ -1,13 +1,18 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 14
   build:
     commands:
       - cat test.js
+      - node test.js
   post_build:
     commands:
       - cat test.js
       - pwd
+      - node test.js
 
 artifacts:
   discard-paths: yes
