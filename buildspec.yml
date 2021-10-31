@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - cat test.js
+  post_build:
+    commands:
+      - cat test.js
+      - pwd
+
+artifacts:
+  discard-paths: yes
